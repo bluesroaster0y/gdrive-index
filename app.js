@@ -9,6 +9,7 @@ if(dark){document.write('<style>* {box-sizing: border-box}body{color:rgba(255,25
 // Initialize the page and load the necessary resources
 function init(){
     document.siteName = $('title').html();
+    console.log(withPassword);
     $('body').addClass("mdui-theme-primary-"+main_color+" mdui-theme-accent-"+accent_color);
     var html = "";
     html += `
