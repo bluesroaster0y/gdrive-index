@@ -756,7 +756,6 @@ function copyToClipboard(str) {
 function file_video(path) {
  let winLocation = window.location.origin; 
 
-  console.log(url);
   console.log(window.location.origin);
   const _withPassword = withPassword
 
