@@ -756,6 +756,8 @@ function copyToClipboard(str) {
 function file_video(path) {
  const url = window.location.origin + path;
   console.log(url);
+  console.log(window.location.origin);
+  console.log(path);
   let player_items = [
     {
       text: 'MXPlayer(Free)',
