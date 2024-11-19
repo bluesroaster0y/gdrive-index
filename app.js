@@ -755,13 +755,17 @@ function copyToClipboard(str) {
 // Document display video |mp4|webm|avi|
 function file_video(path) {
  let winLocation = window.location.origin; 
- const url = window.location.origin + path;
+
   console.log(url);
   console.log(window.location.origin);
   const _withPassword = withPassword
 
-  const urlWithAuth = `https://${_withPassword}@${winLocation.replace(/^https?:\/\//, '')}`;
+  let urlWithAuth = `https://${_withPassword}@${winLocation.replace(/^https?:\/\//, '')}`;
   console.log(urlWithAuth);
+
+  const url = urlWithAuth + path;
+
+  console.log(url);
 
   let player_items = [
     {
