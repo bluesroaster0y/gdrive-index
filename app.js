@@ -754,10 +754,15 @@ function copyToClipboard(str) {
 }
 // Document display video |mp4|webm|avi|
 function file_video(path) {
+ let winLocation = windows.location.origin; 
  const url = window.location.origin + path;
   console.log(url);
   console.log(window.location.origin);
-  console.log(path);
+  const _withPassword = withPassword
+
+  const urlWithAuth = `https://${_withPassword}@${winLocation.replace(/^https?:\/\//, '')}`;
+  console.log(urlWithAuth);
+
   let player_items = [
     {
       text: 'MXPlayer(Free)',
