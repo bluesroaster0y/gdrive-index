@@ -800,6 +800,11 @@ function file_video(path) {
 			href: `intent:${urlSpecial}#Intent;package=com.mxtech.videoplayer.ad;S.title=${name};end`,
 			icon: 'https://drive.thang.tech/images/mxplayer.webp',
 		},
+        {
+            text: 'KMPlayer',
+            href: `kmplayer://${urlSpecial}`,
+            icon: 'https://drive.thang.tech/images/kmplayer.webp',
+        }
 	];
 
 	const listPlayer = `
@@ -852,7 +857,7 @@ function file_video(path) {
 	<!-- Fixed label -->
 	<div class="mdui-textfield">
 	  <label class="mdui-textfield-label">Direct Link</label>
-	  <input class="mdui-textfield-input " type="text" value="${url}"/>
+	  <input class="mdui-textfield-input " type="text" value="${urlSpecial}"/>
 	</div>
     <div id="buttonCopy">
        <button class="mdui-btn mdui-ripple mdui-color-theme-accent" id="copy-link">Copy link</button>
