@@ -782,7 +782,7 @@ function file_video(path) {
 	let player_items = [
 		{
 			text: 'nPlayer',
-			href: `nplayer-${urlSpecial}`,
+			href: `nplayer-${url}`,
 			icon: 'https://drive.thang.tech/images/nplayer.webp',
 		},
 		{
