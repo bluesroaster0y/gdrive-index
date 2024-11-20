@@ -806,9 +806,10 @@ function file_video(path) {
             .text-preview { text-align: center; }
 
             #playerPreview {
-                width: 400px;
-                height: 300px;
+                width: 100%;
+                height: 450px;
             }
+                
         </style>
         <div id="playerList">
             <div class="playList-title">Open with </div>
@@ -849,6 +850,7 @@ const content = `
     new Artplayer({
         container: '#playerPreview',
         url: url,
+        setting: true,
     });
 }
 
