@@ -787,17 +787,17 @@ function file_video(path) {
 		},
 		{
 			text: 'VLC',
-			href: `vlc://${url}`,
+			href: `vlc://${urlSpecial}`,
 			icon: 'https://drive.thang.tech/images/vlc.webp',
 		},
 		{
 			text: 'PotPlayer',
-			href: `potplayer://${url}`,
+			href: `potplayer://${urlSpecial}`,
 			icon: 'https://drive.thang.tech/images/potplayer.webp',
 		},
 		{
 			text: 'MX Player',
-			href: `intent:${url}#Intent;package=com.mxtech.videoplayer.ad;S.title=${name};end`,
+			href: `intent:${urlSpecial}#Intent;package=com.mxtech.videoplayer.ad;S.title=${name};end`,
 			icon: 'https://drive.thang.tech/images/mxplayer.webp',
 		},
 	];
