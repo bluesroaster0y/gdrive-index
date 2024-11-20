@@ -836,7 +836,7 @@ function file_video(path) {
                     ${player_items
 											.map(
 												(item) => `
-                        <a href="${item.href}">
+                        <a href="${item.href}" title="${item.text}">
                             <img src="${item.icon}" alt="${item.text}">
                         </a>
                     `
