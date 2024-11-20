@@ -859,6 +859,12 @@ function file_video(path) {
 	  <label class="mdui-textfield-label">Direct Link</label>
 	  <input class="mdui-textfield-input " type="text" value="${urlSpecial}"/>
 	</div>
+
+    <div class="mdui-textfield">
+	  <label class="mdui-textfield-label">Direct Link</label>
+	  <input class="mdui-textfield-input " type="text" value="${url}"/>
+	</div>
+
     <div id="buttonCopy">
        <button class="mdui-btn mdui-ripple mdui-color-theme-accent" id="copy-link">Copy link</button>
     </div>
