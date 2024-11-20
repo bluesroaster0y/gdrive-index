@@ -825,7 +825,7 @@ function file_video(path) {
                 #playerPreview {
                     height: 250px;
                 }
-                #playerList img { width: 28px;}
+                #playerList img { width: 40px;}
             }
         </style>
         <div class="openText">Open with:
