@@ -874,7 +874,7 @@ function file_video(path) {
 
 	$('#copy-link').on('click', (e) => {
 		e.preventDefault();
-		copyToClipboard(url);
+		copyToClipboard(urlSpecial);
 		mdui.snackbar('Copied To Clipboard!');
 	});
 
