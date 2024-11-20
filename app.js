@@ -846,13 +846,11 @@ const content = `
         mdui.snackbar('Copied To Clipboard!');
     });
 
-    let art = new Artplayer({
-        container: $('.artplayer-app'),
+    new Artplayer({
+        container: '#playerPreview',
         url: url,
     });
 }
-
-document.write('<script> let artPlayer = new new Artplayer({container: ".artplayer-app",url: "")</script>')
 
 // File display Audio |mp3|flac|m4a|wav|ogg|
 function file_audio(path) {
