@@ -783,27 +783,27 @@ function file_video(path) {
 		{
 			text: 'nPlayer',
 			href: `nplayer-${url}`,
-			icon: 'https://drive.thang.tech/images/nplayer.webp',
+			icon: 'https://res.cloudinary.com/df4c7evpx/image/upload/v1732108579/nplayer_yxc6qn.webp',
 		},
 		{
 			text: 'VLC',
-			href: `vlc://${urlSpecial}`,
-			icon: 'https://drive.thang.tech/images/vlc.webp',
+			href: `vlc://${url}`,
+			icon: 'https://res.cloudinary.com/df4c7evpx/image/upload/v1732108582/vlc_sm0z11.webp',
 		},
 		{
 			text: 'PotPlayer',
 			href: `potplayer://${urlSpecial}`,
-			icon: 'https://drive.thang.tech/images/potplayer.webp',
+			icon: 'https://res.cloudinary.com/df4c7evpx/image/upload/v1732108585/potplayer_cv81bu.webp',
 		},
 		{
 			text: 'MX Player',
 			href: `intent:${urlSpecial}#Intent;package=com.mxtech.videoplayer.ad;S.title=${name};end`,
-			icon: 'https://drive.thang.tech/images/mxplayer.webp',
+			icon: 'https://res.cloudinary.com/df4c7evpx/image/upload/v1732108545/mxplayer_jghrv2.webp',
 		},
         {
             text: 'KMPlayer',
             href: `kmplayer://${urlSpecial}`,
-            icon: 'https://drive.thang.tech/images/kmplayer.webp',
+            icon: 'https://res.cloudinary.com/df4c7evpx/image/upload/v1732108340/kmplayer-icon_dov427.png',
         }
 	];
 
@@ -845,7 +845,8 @@ function file_video(path) {
                 </div>
             </div>
         </div>
-        <span class="textNote">Click mở trực tiếp ứng dụng trên điện thoại ( không sử dụng trên PC/Laptop )</span>
+        <span class="textNote">Click mở trực tiếp ứng dụng trên điện thoại ( ngoại trừ VLC Player )</span><br/>
+        <span class="textNote">(*) Riêng VLC Player chọn "Copy Link 2". Sau đó mở App và dán trực tiếp vào, nhập user/pass của bạn</span>
         `;
 
 	const content = `
@@ -856,20 +857,22 @@ function file_video(path) {
     ${listPlayer}
 	<!-- Fixed label -->
 	<div class="mdui-textfield">
-	  <label class="mdui-textfield-label">Direct Link</label>
-	  <input class="mdui-textfield-input " type="text" value="${urlSpecial}"/>
+	  <label class="mdui-textfield-label">Link 1</label>
+	  <input class="mdui-textfield-input" type="text" value="${urlSpecial}"/>
 	</div>
 
     <div class="mdui-textfield">
-	  <label class="mdui-textfield-label">Direct Link</label>
-	  <input class="mdui-textfield-input " type="text" value="${url}"/>
+	  <label class="mdui-textfield-label">Link 2</label>
+	  <input class="mdui-textfield-input" type="text" value="${url}"/>
 	</div>
 
     <div id="buttonCopy">
-       <button class="mdui-btn mdui-ripple mdui-color-theme-accent" id="copy-link">Copy link</button>
+       <button class="mdui-btn mdui-ripple mdui-color-theme-accent" id="copy-link">Copy Link 1</button>
+       <button class="mdui-btn mdui-ripple mdui-color-theme-accent" id="copy-link2">Copy Link 2 </button>
     </div>
 	<div class="mdui-textfield footer-text">
-      <span>(*) Hỗ trợ Nplayer, MxPlayer, VLC, PotPlayer</span><br/><br/>
+      <span>(*) Hỗ trợ Nplayer, MxPlayer, VLC, PotPlayer, KMPlayer, </span><br/><br/>
+      <span>Các ứng dụng khác chọn "Copy Link 2" dán trực tiếp vào app</span><br/><br/>
       <span> ☕ Buy me a coffee <a target="_blank" href="https://github.com/thangnqs/kodi-gdrive/blob/master/images/donate.png">tại đây</a></span>
 	</div>
 </div>
@@ -881,7 +884,13 @@ function file_video(path) {
 	$('#copy-link').on('click', (e) => {
 		e.preventDefault();
 		copyToClipboard(urlSpecial);
-		mdui.snackbar('Copied To Clipboard!');
+		mdui.snackbar('Copied Link 1 To Clipboard!');
+	});
+
+    $('#copy-link2').on('click', (e) => {
+		e.preventDefault();
+		copyToClipboard(url);
+		mdui.snackbar('Copied Link 2 To Clipboard!');
 	});
 
 	new Artplayer({
